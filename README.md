@@ -78,11 +78,12 @@ protected List<ReactPackage> getPackages() {
 // 1. 引入包
 import ReactNativeTencentOrc from 'react-native-tencent-orc'
 
+
 export default class App extends Components{
 
     ...
     componentDidMount(){
-        
+
         // 2. 使用
         RNCloudImage.ocrIdCard((res)=>{
             console.log(res)    // 获取省份证信息，String类型
