@@ -2,9 +2,10 @@
 
 腾讯云 [万象优图（Cloud Image）](https://www.qcloud.com/product/ci) SDK for React-Native
 
+## 资料
+
 - [腾讯云 sdk 文档](https://cloud.tencent.com/document/product/641/12408)
 
-注意: 电脑模拟器上调试获取不到图像识别的数据，在真机调试没这个问题。
 
 ## 如何安装
 
@@ -33,8 +34,60 @@ rnpm info Linking react-native-cloud-image ios dependency
 
 **android**
 
+1. 修改项目下 `/android/settings.gradle` 文件
+
+```
+// 添加下面代码
+include ':react-native-tencent-orc'
+project(':react-native-tencent-orc').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tencent-orc/android')
+```
+
+2. 修改项目下 `/android/app/build.gradle` 文件
+
+```
+dependencies {
+    ...
+    compile project(':react-native-tencent-orc')  // 添加这句
+}
+```
+
+3. 最后修改项目下 `/android/app/src/main/java/com/xxx/MainApplication.java` 文件。
+
+```
+// MainApplication.java
+import com.reactlibrary.ReactNativeTencentOrcPackage;  // 1.引入包
+
+...
+protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+        new MainReactPackage(),
+        new ReactNativeTencentOrcPackage()   // 2.添加这句
+    );
+}
+...
+```
+
+**ios**
 
 
+## 使用
+
+```
+import ReactNativeTencentOrc from 'react-native-tencent-orc'
+
+...
+export default class App extends Components{
+    componentDidMount(){
+        RNCloudImage.ocrIdCard((res)=>{
+            // 获取省份证信息，String类型
+            console.log(res)    
+        })
+    }
+}
+```
 
 
+## 注意事项
+
+1. 电脑模拟器上调试获取不到图像识别的数据，在真机调试没这个问题。
 
