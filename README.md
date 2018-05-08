@@ -70,13 +70,15 @@ protected List<ReactPackage> getPackages() {
 **ios**
 
 
-## 使用
+## 在react native中使用
+
+在 `react-native` 中使用十分简单，只需要像一般组件调用即可。
 
 ```
 import ReactNativeTencentOrc from 'react-native-tencent-orc'
 
 export default class App extends Components{
-    
+
     ...
     componentDidMount(){
         RNCloudImage.ocrIdCard((res)=>{
