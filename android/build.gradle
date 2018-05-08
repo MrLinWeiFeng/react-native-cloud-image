@@ -20,21 +20,20 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
     }
     lintOptions {
-        abortOnError true //false
+        abortOnError false
     }
 }
 
 repositories {
     mavenCentral()
 }
+
 dependencies {
     compile 'com.facebook.react:react-native:+'
     compile files('libs/commons-codec-1.11.jar')
     compile files('libs/slf4j-api-1.7.25.jar')
     compile files('libs/okhttp-2.7.5.jar')
-    //compile files('libs/qcloud-sdk-2.2.7.jar')
 }
   

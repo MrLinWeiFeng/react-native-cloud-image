@@ -1,10 +1,10 @@
 {
     "name": "react-native-cloud-image",
     "description": "腾讯云万象优图CI的 react-native 版本",
-    "version": "1.0.01",
+    "version": "1.0.03",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/banli17/react-native-cloud-image"
     },
     "main": "index.js",
     "keywords": ["tencentyun-image", "tencent image", "腾讯云OCR","万象优图"],

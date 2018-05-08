@@ -5,7 +5,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface ReactNativeTencentOrc : NSObject <RCTBridgeModule>
+@interface RNCloudImage : NSObject <RCTBridgeModule>
 
 @end
   

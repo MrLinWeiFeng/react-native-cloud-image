@@ -1,7 +1,6 @@
 
 import { NativeModules } from 'react-native';
 
-const { ReactNativeTencentOrc } = NativeModules;
-console.log(ReactNativeTencentOrc)
+const { RNCloudImage } = NativeModules;
 
-export default ReactNativeTencentOrc;
+export default RNCloudImage;

@@ -1,7 +1,7 @@
 
-#import "ReactNativeTencentOrc.h"
+#import "RNCloudImage.h"
 
-@implementation ReactNativeTencentOrc
+@implementation RNCloudImage
 
 - (dispatch_queue_t)methodQueue
 {
