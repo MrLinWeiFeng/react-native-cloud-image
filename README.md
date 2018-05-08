@@ -75,6 +75,7 @@ protected List<ReactPackage> getPackages() {
 在 `react-native` 中使用十分简单，只需要像一般组件调用即可。
 
 ```
+// 引入包
 import ReactNativeTencentOrc from 'react-native-tencent-orc'
 
 export default class App extends Components{
