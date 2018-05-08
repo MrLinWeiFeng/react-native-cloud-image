@@ -9,7 +9,7 @@
 
 ## 如何安装
 
-### 1. 首先安装npm包
+### 1. 安装npm包
 
 ```
 npm install react-native-cloud-image --save
@@ -77,12 +77,15 @@ import ReactNativeTencentOrc from 'react-native-tencent-orc'
 
 ...
 export default class App extends Components{
+
     componentDidMount(){
+
         RNCloudImage.ocrIdCard((res)=>{
-            // 获取省份证信息，String类型
-            console.log(res)    
+            console.log(res)    // 获取省份证信息，String类型
         })
+
     }
+
 }
 ```
 
